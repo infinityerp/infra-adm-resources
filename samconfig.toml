@@ -6,3 +6,4 @@ stack_name = "infra-adm-resources"
 [main.deploy.parameters]
 stack_name = "infra-adm-resources"
 
+
