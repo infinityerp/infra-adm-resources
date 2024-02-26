@@ -1,6 +1,7 @@
 version=0.1
 
-[default]
-[default.global]
-[default.global.parameters]
+[main.build.parameters]
+stack_name = "infra-adm-resources"
+
+[main.deploy.parameters]
 stack_name = "infra-adm-resources"
