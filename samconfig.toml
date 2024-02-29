@@ -3,8 +3,19 @@ version=0.1
 [default.deploy.parameters]
 stack_name = "infra-adm-resources"
 
-[main.deploy.parameters]
+[prod.deploy.parameters]
 stack_name = "infra-adm-resources"
+env = 'prod'
+
+[test.deploy.parameters]
+stack_name = "infra-adm-resources"
+env = 'test'
+
+[develop.deploy.parameters]
+stack_name = "infra-adm-resources"
+env = 'develop'
+
+
 
 
 

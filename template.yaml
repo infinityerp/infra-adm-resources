@@ -1,14 +1,37 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Example of processing messages on an SQS queue with Lambda
+
+Parameters:
+  env:
+    Type: 'String'
+    AllowedValues:
+      - develop
+      - test
+      - prod
+
 Resources:
-  MySqsQueue:
-    Type: AWS::SQS::Queue
+  AdmApiGateway:
+    Type: AWS::ApiGateway::RestApi
     Properties:
-      QueueName: my-queue
+      Description: 'ADM API Gateway'
+      EndpointConfiguration:
+        Types:
+          - 'PRIVATE'
 
+  AdmApiGatewayDeployment:
+    Type: AWS::ApiGateway::Deployment
+    Properties:
+      RestApiId: !Ref AdmApiGateway
+      Description: 'Deployment'
+    DependsOn: AdmApiGateway
 
-
+  AdmApiGatewayStage:
+    Type: AWS::ApiGateway::Stage
+    Properties:
+      StageName: !Ref env
+      RestApiId: !Ref AdmApiGateway
+      DeploymentId: !Ref AdmApiGatewayDeployment
 
 
 
