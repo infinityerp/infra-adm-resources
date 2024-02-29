@@ -5,15 +5,21 @@ stack_name = "infra-adm-resources"
 
 [prod.deploy.parameters]
 stack_name = "infra-adm-resources"
-env = 'prod'
+parameter_overrides = [
+    "env=prod"
+]
 
 [test.deploy.parameters]
 stack_name = "infra-adm-resources"
-env = 'test'
+parameter_overrides = [
+    "env=test"
+]
 
 [develop.deploy.parameters]
 stack_name = "infra-adm-resources"
-env = 'develop'
+parameter_overrides = [
+    "env=develop"
+]
 
 
 
