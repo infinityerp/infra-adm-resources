@@ -17,12 +17,12 @@ Resources:
       Name: 'adm-gateway'
       Description: 'ADM API Gateway'
       Policy:
-        Version: '2021-10-17'
+        Version: '2012-10-17'
         Statement:
           - Effect: 'Allow'
             Principal: '*'
-            Action: 'execute-api:Innoke'
-            Resource: 'execute-api:/*'
+            Action: 'execute-api:Invoke'
+            Resource: 'execute-api:*:*:*/*'
       EndpointConfiguration:
         Types:
           - 'PRIVATE'
