@@ -29,6 +29,8 @@ Resources:
 
   AdmApiGatewayDeployment:
     Type: AWS::ApiGateway::Deployment
+    DependsOn:
+      - AdmApiGateway
     Properties:
       RestApiId: !Ref AdmApiGateway
       Description: 'Deployment'
