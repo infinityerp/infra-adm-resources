@@ -32,14 +32,9 @@ Resources:
     Properties:
       RestApiId: !Ref AdmApiGateway
       Description: 'Deployment'
-    DependsOn: AdmApiGateway
-
-  AdmApiGatewayStage:
-    Type: AWS::ApiGateway::Stage
-    Properties:
       StageName: !Ref env
-      RestApiId: !Ref AdmApiGateway
-      DeploymentId: !Ref AdmApiGatewayDeployment
+
+
 
 
 
