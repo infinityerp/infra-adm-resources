@@ -9,7 +9,7 @@ Resources:
   MySqsaQueue:
     Type: AWS::SQS::Queue
     Properties:
-      QueueName: my-queuead
+      QueueName: my-queueadd
 
 
 
