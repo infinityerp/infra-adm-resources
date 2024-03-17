@@ -6,7 +6,10 @@ Resources:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: my-queue
-
+  MySqsaQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: my-queuea
 
 
 
